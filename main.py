@@ -1,4 +1,4 @@
-import pygame # type: ignore
+import pygame
 
 from constants import SCREEN_HEIGHT, SCREEN_WIDTH
 from player import Player
@@ -24,6 +24,7 @@ def main():
             
         #Paint elements on screen
         screen.fill("black")
+        player.update(dt)
         player.draw(screen)
 
         dt = clock.tick(FRAMERATE) /1000
