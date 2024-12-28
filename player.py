@@ -39,6 +39,9 @@ class Player(CircleShape):
         self.shoot_timer = PLAYER_SHOOT_COOLDOWN
 
     def update(self, dt):
+        #Timers
+        self.shoot_timer -= dt
+
         #Player Inputs
         keys = pygame.key.get_pressed()
         
@@ -56,6 +59,3 @@ class Player(CircleShape):
 
         if keys[pygame.K_SPACE]:
             self.shoot()
-
-        #Timers
-        self.shoot_timer -= dt
